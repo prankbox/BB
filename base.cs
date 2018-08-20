@@ -28,7 +28,22 @@ namespace BB
             System.Console.WriteLine(message);
         }
 
-        
+        public static List<string> GetLinks()
+        {
+            string linkOne = "One";
+            string linkTwo = "Two";
+            string linkThree = "Three";
+
+            var linkList = new List<string>();
+            linkList.Add(linkOne);
+            linkList.Add(linkTwo);
+            linkList.Add(linkThree);
+
+            return linkList;
+
+        }
+
+
 
 
     }
@@ -41,6 +56,16 @@ namespace BB
         {
             string message = String.Format("Успешно залогинились в Youtube с логином {0}",YoutubeAccount.Login);
             System.Console.WriteLine(message);
+        }
+
+        public void NavigateVideo(string Video)
+        {
+            System.Console.WriteLine("Перешли на видео "+ Video);
+        }
+
+        public void Like(string Video)
+        {
+            System.Console.WriteLine("Лайкнули видео "+ Video);
         }
 
     }
