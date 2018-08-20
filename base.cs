@@ -13,6 +13,7 @@ namespace BB
 
     public static class Vkontakte
     {
+        public static string ChatLink;
         public static Account VkAccount = new Account();
         public static void Logon()
         {
@@ -24,7 +25,7 @@ namespace BB
 
         public static void GoToChat()
         {
-            string message = String.Format("Успешно перешли  в ВК чат {0}",VkAccount.Login);
+            string message = String.Format("Успешно перешли  в ВК чат {0}",ChatLink);
             System.Console.WriteLine(message);
         }
 

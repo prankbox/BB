@@ -9,14 +9,16 @@ namespace BB
             Vkontakte.VkAccount.Login = "VkLogin";
             Vkontakte.VkAccount.Password = "Password";
             Vkontakte.VkAccount.ProfilePath ="file";
+            Vkontakte.ChatLink = "vk.com/chat";
             Vkontakte.Logon();
             Vkontakte.GoToChat();
-            if(Vkontakte.GetLinks().Count==0)
+            List<string> youtubeLinks = Vkontakte.GetLinks();
+            if(youtubeLinks.Count==0)
             {
                 System.Console.WriteLine("Нет ссылок для лайкинга");
                 return;
             }
-
+            System.Console.WriteLine(String.Format("Собрали {0} ссылок",youtubeLinks.Count));
 
             var Youtube = new Youtube();
             Youtube.YoutubeAccount.Login = "Youtube Login";
