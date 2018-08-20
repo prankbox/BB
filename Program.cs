@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 namespace BB
 {
     class Program
@@ -8,8 +9,15 @@ namespace BB
         {
             Vkontakte.VkAccount.Login = "VkLogin";
             Vkontakte.VkAccount.Password = "Password";
-            Vkontakte.VkAccount.ProfilePath ="file";
             Vkontakte.ChatLink = "vk.com/chat";
+            if(File.Exists(Vkontakte.VkAccount.ProfilePath))
+            {
+                Vkontakte.Logon(Vkontakte.VkAccount.ProfilePath);
+            }
+            else
+            {
+                Vkontakte.Logon();
+            }
             Vkontakte.Logon();
             Vkontakte.GoToChat();
             List<string> youtubeLinks = Vkontakte.GetLinks();

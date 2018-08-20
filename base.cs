@@ -14,10 +14,19 @@ namespace BB
     public static class Vkontakte
     {
         public static string ChatLink;
+        public static string VkProfile = "VkProfileName";
         public static Account VkAccount = new Account();
         public static void Logon()
         {
             string message = String.Format("Успешно залогинились в ВК с логином {0}",VkAccount.Login);
+            System.Console.WriteLine(message);
+
+
+        }
+
+        public static void Logon(string vkProfile)
+        {
+            string message = String.Format("Успешно залогинились в ВК с профилем {0}",vkProfile);
             System.Console.WriteLine(message);
 
 
