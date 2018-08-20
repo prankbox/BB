@@ -61,10 +61,17 @@ namespace BB
     public class Youtube
     {
         public string Channel;
+        public string YouProfile = "YoutubeProfileName";
         public Account YoutubeAccount = new Account();
         public void Logon()
         {
             string message = String.Format("Успешно залогинились в Youtube с логином {0}",YoutubeAccount.Login);
+            System.Console.WriteLine(message);
+        }
+
+        public void Logon(string youProfile)
+        {
+            string message = String.Format("Успешно залогинились в Youtube с профилем {0}",youProfile);
             System.Console.WriteLine(message);
         }
 

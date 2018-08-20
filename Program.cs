@@ -18,8 +18,9 @@ namespace BB
             {
                 Vkontakte.Logon();
             }
-            Vkontakte.Logon();
+            
             Vkontakte.GoToChat();
+
             List<string> youtubeLinks = Vkontakte.GetLinks();
             if(youtubeLinks.Count==0)
             {
@@ -31,7 +32,15 @@ namespace BB
             var Youtube = new Youtube();
             Youtube.YoutubeAccount.Login = "Youtube Login";
             Youtube.YoutubeAccount.Password = "Youtube Password";
-            Youtube.Logon();
+            if(File.Exists(Youtube.YouProfile))
+            {
+                Youtube.Logon(Youtube.YouProfile);
+            }
+            else
+            {
+                Youtube.Logon();
+            }
+            
             foreach(var VkLink in Vkontakte.GetLinks())
             {
                 Youtube.NavigateVideo(VkLink);
