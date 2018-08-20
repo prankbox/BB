@@ -24,7 +24,7 @@ namespace BB
 
         public static void GoToChat()
         {
-            string message = String.Format("Успешно залогинились в ВК с логином {0}",VkAccount.Login);
+            string message = String.Format("Успешно перешли  в ВК чат {0}",VkAccount.Login);
             System.Console.WriteLine(message);
         }
 
