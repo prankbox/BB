@@ -32,6 +32,7 @@ namespace BB
             var Youtube = new Youtube();
             Youtube.YoutubeAccount.Login = "Youtube Login";
             Youtube.YoutubeAccount.Password = "Youtube Password";
+            
             if(File.Exists(Youtube.YouProfile))
             {
                 Youtube.Logon(Youtube.YouProfile);
