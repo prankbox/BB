@@ -23,7 +23,7 @@ namespace BB
         {
             string message = String.Format("Успешно залогинились в ВК с логином {0}",VkAccount.Login);
             System.Console.WriteLine(message);
-            
+            //Save profile
 
         }
 
@@ -76,6 +76,7 @@ namespace BB
         {
             string message = String.Format("Успешно залогинились в Youtube с профилем {0}",youProfile);
             System.Console.WriteLine(message);
+            //Save Profile
         }
 
         public void NavigateVideo(string Video)
