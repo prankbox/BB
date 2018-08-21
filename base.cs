@@ -9,19 +9,21 @@ namespace BB
         public string Login;
         public string Password;
         public string ProfilePath;
+        public string ZPfile;
 
     }
 
     public static class Vkontakte
     {
         public static string ChatLink;
-        public static string VkProfile = "VkProfileName";
+        public static string VkProfile;
         public static Account VkAccount = new Account();
+        
         public static void Logon()
         {
             string message = String.Format("Успешно залогинились в ВК с логином {0}",VkAccount.Login);
             System.Console.WriteLine(message);
-
+            
 
         }
 
@@ -62,7 +64,7 @@ namespace BB
     public class Youtube
     {
         public string Channel;
-        public string YouProfile = "YoutubeProfileName";
+        public string YouProfile;
         public Account YoutubeAccount = new Account();
         public void Logon()
         {
