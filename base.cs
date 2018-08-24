@@ -65,6 +65,7 @@ namespace BB
     {
         public string Channel;
         public string YouProfile;
+        
         public Account YoutubeAccount = new Account();
         public void Logon()
         {

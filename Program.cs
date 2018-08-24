@@ -38,6 +38,7 @@ namespace BB
             Youtube.YoutubeAccount.Password = "Youtube Password";
             Youtube.YoutubeAccount.ProfilePath = @"\Profiles\";
             Youtube.YoutubeAccount.ZPfile = @"YProfile";
+            Youtube.Channel = "youtube.com/channel";
             Youtube.YouProfile = Youtube.YoutubeAccount.ProfilePath + Youtube.YoutubeAccount.ZPfile;
 
             if(File.Exists(Youtube.YouProfile))
